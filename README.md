@@ -1,1 +1,128 @@
 # Caps-co
+
+  </nav>
+  <div class="container" id="shop">
+    <h2 id="product-heading">Produkte</h2>
+    <div class="product">
+      <h3 id="prod1-name">Basic Cap</h3><!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caps&co</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    header, footer {
+      background-color: #1e1e1e;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 2em;
+    }
+    a {
+      color: #f0f0f0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1em;
+    }
+    .product {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+    .product h3 {
+      margin-top: 0;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+    .btn {
+      background: #333;
+      color: #fff;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switcher">
+    <button class="btn" onclick="switchLanguage('de')">Deutsch</button>
+    <button class="btn" onclick="switchLanguage('en')">English</button>
+  </div>
+  <header>
+    <h1 id="title">Caps&co</h1>
+    <p id="description">Alles was du brauchst – günstig und mit Qualität</p>
+  </header>
+  <nav>
+    <a href="#shop" id="nav-shop">Shop</a>
+    <a href="#contact" id="nav-contact">Kontakt</a>
+      <p id="prod1-desc">Schlichte schwarze Cap aus Baumwolle</p>
+      <p><strong>€14.99</strong></p>
+      <button class="btn" id="prod1-cart">In den Warenkorb</button>
+    </div>
+    <!-- Weitere Produkte folgen hier -->
+  </div>
+  <footer id="contact">
+    <p id="footer-text">Kontakt: info@capsandco.de</p>
+  </footer>
+
+  <script>
+    const translations = {
+      de: {
+        title: "Caps&co",
+        description: "Alles was du brauchst – günstig und mit Qualität",
+        "nav-shop": "Shop",
+        "nav-contact": "Kontakt",
+        "product-heading": "Produkte",
+        "prod1-name": "Basic Cap",
+        "prod1-desc": "Schlichte schwarze Cap aus Baumwolle",
+        "prod1-cart": "In den Warenkorb",
+        "footer-text": "Kontakt: info@capsandco.de"
+      },
+      en: {
+        title: "Caps&co",
+        description: "Everything you need – affordable and high quality",
+        "nav-shop": "Shop",
+        "nav-contact": "Contact",
+        "product-heading": "Products",
+        "prod1-name": "Basic Cap",
+        "prod1-desc": "Simple black cotton cap",
+        "prod1-cart": "Add to Cart",
+        "footer-text": "Contact: info@capsandco.de"
+      }
+    };
+
+    function switchLanguage(lang) {
+      const elements = Object.keys(translations[lang]);
+      elements.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[lang][id];
+      });
+    }
+  </script>
+</body>
+</html>
